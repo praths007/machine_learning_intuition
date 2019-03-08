@@ -50,13 +50,13 @@ sigmoid = function(x){
 ## with base glm logit regression
 ############################################
 plot(iris_data$Petal.Width, iris_data$Petal.Length)
-reg<-glm(Species ~ Petal.Width + Petal.Length, data = iris_data,
+reg=glm(Species ~ Petal.Width + Petal.Length, data = iris_data,
          family='binomial')
 
 ## this should be of form y = mx + c
 # https://stats.stackexchange.com/questions/6206/how-to-plot-decision-boundary-in-r-for-logistic-regression-model/159977
-slope <- coef(reg)[2]/(-coef(reg)[3])
-intercept <- coef(reg)[1]/(-coef(reg)[3]) 
+slope = coef(reg)[2]/(-coef(reg)[3])
+intercept = coef(reg)[1]/(-coef(reg)[3]) 
 
 abline(intercept, slope)
 ############################################
@@ -152,8 +152,8 @@ gradient_descent_for_logloss = function(alpha, iterations, initial_theta, train_
   ## gradient update
   theta = theta - theta_iter
   
-  slope <- theta[2]/(-theta[3])
-  intercept <- theta[1]/(-theta[3]) 
+  slope = theta[2]/(-theta[3])
+  intercept = theta[1]/(-theta[3]) 
   plot(iris_data$Petal.Width, iris_data$Petal.Length)
   abline(intercept, slope)
   Sys.sleep(0)
