@@ -1,4 +1,4 @@
-# machine_learning_intuition
+# machine_learning_intuitions
 
 ## gradient descent intuition
 
