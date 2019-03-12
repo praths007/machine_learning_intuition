@@ -239,13 +239,11 @@ gradient_descent_for_nn = function(alpha, iterations, train_x, train_y)
 }
 
 
-
-
 alpha = 0.01
 ## keep changing epochs, more epochs = more steps towards minimum cost
-epochs = 600
+epochs = 3000
 
-thetas = gradient_descent_for_nn(alpha, 3000, train_x, train_y)
+thetas = gradient_descent_for_nn(alpha, epochs, train_x, train_y)
 
 plot(cost)
 
@@ -257,4 +255,4 @@ h2 = sigmoid(cbind(1, h1) %*% t(thetas[[2]]))
 preds = apply(h2, 1, function(x) which(x == max(x)))
 
 confusionMatrix(as.factor(preds), as.factor(test_y))
-
+## 100% accuracy
