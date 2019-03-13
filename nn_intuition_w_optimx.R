@@ -184,7 +184,7 @@ cost_nn_gradient_optm = function(data, x){
     }
     individual_train[i] = sum(individual_theta_k)
   }
-  # -(1/m) * sum(individual_train)
+  cost <<- c(cost, -(1/m) * sum(individual_train))
   
   
   ## backpropogation (adjusting weights of previous layers wrt error in output layer)
@@ -211,9 +211,6 @@ cost_nn_gradient_optm = function(data, x){
   
   c(Theta1_grad, Theta2_grad)
 }   
-
-
-
 
 
 
@@ -244,9 +241,7 @@ confusionMatrix(as.factor(preds), as.factor(test_y))
 
 
 
-
-
-
+plot(cost)
 
 
 
