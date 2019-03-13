@@ -104,6 +104,7 @@ init_theta = init_theta - theta_iter
 init_theta
 
 # rest of this can be repeated. next section shows gradient descent
+# which is repeating all steps given above to optimize for cost (minimize it)
 
 
 
